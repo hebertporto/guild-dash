@@ -42,6 +42,7 @@ $config = [
         'urlManager'=> [
             'class' => 'yii\web\UrlManager', //Set class
             'enablePrettyUrl'=> true, //new showScriptName = false
+            'showScriptName' => false,
             'rules'=> [
                 'post//'=>'post/view',
                 'posts/'=>'post/index'
