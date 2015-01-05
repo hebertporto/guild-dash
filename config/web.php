@@ -17,6 +17,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -47,6 +48,14 @@ $config = [
                 'post//'=>'post/view',
                 'posts/'=>'post/index'
             ],
+        ],
+        'formatter' => [
+            'dateFormat' => 'dd.MM.yyyy',
+            'datetimeFormat' => 'd-M-Y H:i:s',
+            'timeFormat' => 'H:i:s',
+            'decimalSeparator' => ',',
+            'thousandSeparator' => ' ',
+            'currencyCode' => 'BR',
         ],
     ],
     'params' => $params,

@@ -35,7 +35,7 @@ $this->title = 'Login';
             <div style="margin-left: 70px;">
                 <?= $form->field($model, 'rememberMe', [
                     'template' => "<div class=\" col-lg-3\" style=\" margin-left: 15px;\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-                ])->checkbox() ?>
+                ])->checkbox()->label('Lembrar-se') ?>
             </div>
             <div class="form-group">
                 <div class="col-lg-11">

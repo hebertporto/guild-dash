@@ -36,6 +36,7 @@ AppAsset::register($this);
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
                     ['label' => 'Home', 'url' => ['/site/index']],
+                    ['label' => 'Anúncios', 'url' => ['/anuncio/create']],
                     Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/site/login']] :
                         ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
