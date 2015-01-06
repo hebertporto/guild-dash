@@ -13,17 +13,52 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
     private static $users = [
         '100' => [
             'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
+            'username' => 'mamuti',
+            'password' => '00556633',
             'authKey' => 'test100key',
             'accessToken' => '100-token',
         ],
         '101' => [
             'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
+            'username' => 'heavymetal',
+            'password' => 'sirviado',
             'authKey' => 'test101key',
             'accessToken' => '101-token',
+        ],
+        '102' => [
+            'id' => '102',
+            'username' => 'ecko',
+            'password' => '1245789',
+            'authKey' => 'test102key',
+            'accessToken' => '102-token',
+        ],
+        '103' => [
+            'id' => '103',
+            'username' => 'coradini',
+            'password' => '98653245',
+            'authKey' => 'test103key',
+            'accessToken' => '103-token',
+        ],
+        '104' => [
+            'id' => '104',
+            'username' => 'sirstenzyl',
+            'password' => 'demo',
+            'authKey' => 'test104key',
+            'accessToken' => '104-token',
+        ],
+        '105' => [
+            'id' => '105',
+            'username' => 'adam',
+            'password' => '98005533',
+            'authKey' => 'test105key',
+            'accessToken' => '105-token',
+        ],
+        '106' => [
+            'id' => '106',
+            'username' => 'krinnus',
+            'password' => '66558877',
+            'authKey' => 'test106key',
+            'accessToken' => '106-token',
         ],
     ];
 

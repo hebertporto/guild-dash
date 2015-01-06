@@ -32,7 +32,7 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
     <div class="row">
         <div class="col-lg-12">
             <hr style="border: 0;height: 1px;background: #333;background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);background-image: -ms-linear-gradient(left, #ccc, #333, #ccc); background-image: -o-linear-gradient(left, #ccc, #333, #ccc); ">
-            <h2>Anúncio - <small><?php echo date( "d/m/Y - H:m:s",strtotime($ultimoAnuncio->data_hora)); ?></small></h2>
+            <h2>Anúncio - <small><?php echo date( "d/m/Y - H:i:s",strtotime($ultimoAnuncio->data_hora)); ?></small></h2>
             <p class="well">
                <?php echo $ultimoAnuncio->anuncio . '<br /><em>Postado por:</em> <strong>' . $ultimoAnuncio->player . '</strong>'; ?>
 
@@ -53,7 +53,10 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
                         ],
                         [
                             'attribute' => 'data_hora',
-                            'format' => ['date', 'php:d/m/Y H:i'],
+                            'format' => 'raw',
+                            'value' => function($model){
+                                return date("d/m/Y - H:i:s",strtotime($model->data_hora));
+                            },
                         ],
                     ],
                     'options' => ['class' => 'text-center']
@@ -79,8 +82,10 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
                         ],
                         [
                             'attribute' => 'data_hora',
-                            'format' => ['date', 'php:d/m/Y H:i'],
-
+                            'format' => 'raw',
+                            'value' => function($model){
+                                return date("d/m/Y - H:i:s",strtotime($model->data_hora));
+                            },
                         ],
 
                     ],
@@ -119,9 +124,9 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
                         ],
                         [
                             'attribute' => 'data_hora',
-                            'format' => ['date', 'php:d/m/Y H:i'],
-                            'value' => function($data){
-                                return $data->data_hora;
+                            'format' => 'raw',
+                            'value' => function($model){
+                                return date("d/m/Y - H:i:s",strtotime($model->data_hora));
                             },
                         ],
                     ],
@@ -156,7 +161,10 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
                         ],
                         [
                             'attribute' => 'data_hora',
-                            'format' => ['date', 'php:d/m/Y H:i'],
+                            'format' => 'raw',
+                            'value' => function($model){
+                                return date("d/m/Y - H:i:s",strtotime($model->data_hora));
+                            },
                         ],
                     ],
                     'options' => ['class' => 'text-center']
@@ -191,7 +199,10 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
                         ],
                         [
                             'attribute' => 'data_hora',
-                            'format' => ['date', 'php:d/m/Y H:i'],
+                            'format' => 'raw',
+                            'value' => function($model){
+                                return date("d/m/Y - H:i:s",strtotime($model->data_hora));
+                            },
                         ],
                     ],
                     'options' => ['class' => 'text-center']
