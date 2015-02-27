@@ -17,6 +17,8 @@ use kartik\widgets\DateTimePicker;
         ['Ice' => 'Ice',
             'Wind' => 'Wind',
             'Poison' => 'Poison',
+            'Mage' => 'Mage',
+            'Ophidian' => 'Ophidian',
         ],
         ['prompt'=>'Selecione um Prisma']    // options
     ); ?>

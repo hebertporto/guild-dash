@@ -60,6 +60,77 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
             'authKey' => 'test106key',
             'accessToken' => '106-token',
         ],
+        '107' => [
+            'id' => '107',
+            'username' => 'strider',
+            'password' => '0033123',
+            'authKey' => 'test107key',
+            'accessToken' => '107-token',
+        ],
+        '108' => [
+            'id' => '108',
+            'username' => 'meianoite',
+            'password' => '9865472',
+            'authKey' => 'test108key',
+            'accessToken' => '108-token',
+        ],
+        '109' => [
+            'id' => '109',
+            'username' => 'bloodsteell',
+            'password' => '898989',
+            'authKey' => 'test109key',
+            'accessToken' => '106-token',
+        ],
+        '110' => [
+            'id' => '110',
+            'username' => 'jontex',
+            'password' => '55660099',
+            'authKey' => 'test110key',
+            'accessToken' => '110-token',
+        ],
+        '111' => [
+            'id' => '111',
+            'username' => 'ark',
+            'password' => '99550033',
+            'authKey' => 'test111key',
+            'accessToken' => '111-token',
+        ],
+        '112' => [
+            'id' => '112',
+            'username' => 'dean',
+            'password' => '63550022',
+            'authKey' => 'test112key',
+            'accessToken' => '112-token',
+        ],
+        '113' => [
+            'id' => '113',
+            'username' => 'matado',
+            'password' => '00445533',
+            'authKey' => 'test113key',
+            'accessToken' => '113-token',
+        ],
+        '114' => [
+            'id' => '114',
+            'username' => 'knoxx',
+            'password' => '7895544',
+            'authKey' => 'test114key',
+            'accessToken' => '114-token',
+        ],
+        '115' => [
+            'id' => '115',
+            'username' => 'seumadruga',
+            'password' => '963963123',
+            'authKey' => 'test115key',
+            'accessToken' => '115-token',
+        ],
+        '116' => [
+            'id' => '116',
+            'username' => 'ned',
+            'password' => '789630011',
+            'authKey' => 'test116key',
+            'accessToken' => '116-token',
+        ],
+
     ];
 
     /**

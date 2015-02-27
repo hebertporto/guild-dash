@@ -38,17 +38,36 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
 
             </p>
         </div>
-        <div class="col-lg-12">
-            <h2 class="text-muted">Registrar Ação</h2>
-            <div class="row">
-                <span class="col-lg-2"><?= Html::a('ADD Champion', ['champion/create'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></span>
-                <span class="col-lg-2"><?= Html::a('ADD Boss', ['boss/create'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></span>
-                <span class="col-lg-3"><?= Html::a('ADD Respaw Animal', ['respaw-animal/create'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></span>
-                <span class="col-lg-2"><?= Html::a('ADD Prisma', ['prisma/create'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></span>
-                <span class="col-lg-3"><?= Html::a('ADD Fila de Armas', ['fila-arma/index'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></span>
-            </div>
-        </div>
         <div class="col-lg-3">
+            <h2 class="text-info">Champion</h2>
+
+            <p>
+                <?php
+                echo GridView::widget([
+                    'dataProvider' => $dataProviderChampion,
+                    'summary' => false,
+                    'columns' => [
+                        [
+                           'attribute' => 'nome',
+                            'format' => 'text'
+                        ],
+                        [
+                            'attribute' => 'data_hora',
+                            'format' => 'raw',
+                            'value' => function($model){
+                                return date("d/m/Y - H:i:s",strtotime($model->data_hora));
+                            },
+                        ],
+                    ],
+                    'options' => ['class' => 'text-center']
+                ]);
+
+                ?>
+            </p>
+
+
+        </div>
+        <div class="col-lg-2">
             <h2 class="text-danger">Boss</h2>
 
             <p>
@@ -79,8 +98,8 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
 
 
         </div>
-        <div class="col-lg-5">
-            <h2 class="text-success">Respaw de Animal Color</h2>
+        <div class="col-lg-4">
+            <h2 class="text-success">Respaw Animal</h2>
 
             <p>
                 <?php
@@ -91,12 +110,13 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
                         [
                             'attribute' => 'animal',
                             'format' => 'raw',
-
+                            'value' => function($model){
+                                return substr($model->animal, 0,5);
+                            },
                         ],
                         [
                             'attribute' => 'color',
-                            'format' => 'text',
-                            'contentOptions'=>['style'=>'max-width: 70px;'],
+                            'format' => 'text'
                         ],
                         [
                             'attribute' => 'player',
@@ -108,7 +128,6 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
                             'value' => function($model){
                                 return date("d/m/Y - H:i:s",strtotime($model->data_hora));
                             },
-                            'contentOptions'=>['style'=>'max-width: 20px; font-size: 12px;'],
                         ],
                     ],
                     'options' => ['class' => 'text-center']
@@ -119,7 +138,7 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
 
 
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             <h2 class="text-warning">True Prisma</h2>
 
             <p>
@@ -146,7 +165,6 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
                             'value' => function($model){
                                 return date("d/m/Y - H:i:s",strtotime($model->data_hora));
                             },
-                            'contentOptions'=>['style'=>'max-width: 30px; font-size: 12px;'],
                         ],
                     ],
                     'options' => ['class' => 'text-center']
@@ -196,32 +214,13 @@ $this->title = 'Guild Dash - Gerenciador de Guildas de Ultima Online';
 
         </div>
         <div class="col-lg-4">
-            <h2 class="text-info">Champion</h2>
+            <h2 class="text-muted">Registrar Ação</h2>
 
-            <p>
-                <?php
-                echo GridView::widget([
-                    'dataProvider' => $dataProviderChampion,
-                    'summary' => false,
-                    'columns' => [
-                        [
-                            'attribute' => 'nome',
-                            'format' => 'text'
-                        ],
-                        [
-                            'attribute' => 'data_hora',
-                            'format' => 'raw',
-                            'value' => function($model){
-                                return date("d/m/Y - H:i:s",strtotime($model->data_hora));
-                            },
-                        ],
-                    ],
-                    'options' => ['class' => 'text-center']
-                ]);
-
-                ?>
-            </p>
-
+            <p><?= Html::a('ADD Champion', ['champion/create'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></p>
+            <p><?= Html::a('ADD Boss', ['boss/create'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></p>
+            <p><?= Html::a('ADD Respaw Animal', ['respaw-animal/create'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></p>
+            <p><?= Html::a('ADD Prisma', ['prisma/create'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></p>
+            <p><?= Html::a('ADD Fila de Armas', ['fila-arma/index'], ['class' => 'btn btn-primary btn-lg btn-block']) ?></p>
 
         </div>
     </div>

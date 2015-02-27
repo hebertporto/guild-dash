@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/guild-dash.iml" filepath="$PROJECT_DIR$/.idea/guild-dash.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/guild-dash-online.iml" filepath="$PROJECT_DIR$/.idea/guild-dash-online.iml" />
     </modules>
   </component>
 </project>
-

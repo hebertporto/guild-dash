@@ -31,6 +31,11 @@ use kartik\widgets\DateTimePicker;
 
     <?= $form->field($model, 'color')->dropDownList(
         [
+            'Celestial' => 'Celestial',
+            'Sun' => 'Sun',
+            'Platinium' => 'Platinium',
+            'Elven' => 'Elven',
+            'BlackDiamond' => 'BlackDiamond',
             'Blood' => 'Blood',
             'Fire' => 'Fire',
             'Snow' => 'Snow',

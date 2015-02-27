@@ -80,7 +80,7 @@ class SiteController extends Controller
             $dataProviderFilaArma = new ActiveDataProvider([
                 'query' => \app\models\FilaArma::find()->orderBy('posicao ASC'),
                 'pagination' => [
-                    'pageSize' => 7,
+                    'pageSize' => 20,
                 ],
             ]);
 
